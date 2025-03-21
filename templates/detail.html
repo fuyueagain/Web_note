@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ article.title }} - Yuki技术博客{% endblock %}
+
+{% block content %}
+    <div class="article-detail">
+        <h1 class="article-detail-title">{{ article.title }}</h1>
+        {% if article.quote %}
+            <div class="article-detail-quote">{{ article.quote }}</div>
+        {% endif %}
+        {% if article.comment %}
+            <div class="article-detail-comment">{{ article.comment }}</div>
+        {% endif %}
+        <div class="article-detail-content">{{ article.content }}</div>
+    </div>
+{% endblock %}
